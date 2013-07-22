@@ -22,14 +22,14 @@ Building the virtual machine is this easy:
     host $ git submodule update
     host $ vagrant up
 
-If the base box is not present that command fetches it first. 
+If the base box (rails32rsb) is not present that command fetches it first.  See the master branch for the original base.
 
     host $ vagrant ssh
     Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
     ...
     vagrant@rails-starter-box:~$
 
-Port 3000 in the host computer is forwarded to port 3000 in the virtual machine. Thus, applications running in the virtual machine can be accessed via localhost:3000 in the host computer.
+A private network is set up with the vm computer placed at 192.168.33.10.
 
 ## What's In The Box
 
@@ -47,6 +47,8 @@ Port 3000 in the host computer is forwarded to port 3000 in the virtual machine.
 The recommended workflow is
 
 * edit files in the host computer
+
+* while git can be run on either side, it is perhaps more convenient to do this on the host computer
 
 * run within the virtual machine
 
